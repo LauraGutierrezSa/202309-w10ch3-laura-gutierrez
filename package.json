@@ -2,6 +2,7 @@
   "name": "w10ch3",
   "version": "1.0.0",
   "description": "week 10 challenge 3",
+  "type": "module",
   "main": "dist/index.js",
   "scripts": {
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
@@ -17,22 +18,29 @@
   "devDependencies": {
     "@commitlint/cli": "^18.4.1",
     "@commitlint/config-conventional": "^18.4.0",
+    "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.8",
+    "@types/morgan": "^1.9.9",
     "@typescript-eslint/eslint-plugin": "^6.11.0",
-    "@typescript-eslint/parser": "^6.11.0",
+    "@typescript-eslint/parser": "^6.10.0",
     "eslint": "^8.53.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-config-xo": "^0.43.1",
     "eslint-config-xo-typescript": "^1.0.1",
+    "express": "^4.18.2",
     "husky": "^8.0.0",
     "jest": "^29.7.0",
     "lint-staged": "^15.1.0",
+    "mongoose": "^8.0.1",
+    "morgan": "^1.10.0",
+    "prettier": "^3.1.0",
     "ts-jest": "^29.1.1",
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "@babel/plugin-transform-modules-commonjs": "^7.23.3",
-    "@types/jest": "^29.5.8",
-    "prettier": "^3.1.0"
+    "@babel/types": "^7.23.3",
+    "chalk": "^5.3.0",
+    "dotenv": "^16.3.1"
   },
   "babel": {
     "env": {
