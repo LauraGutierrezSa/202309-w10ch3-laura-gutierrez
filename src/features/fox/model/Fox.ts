@@ -6,7 +6,7 @@ const foxSchema = new Schema<FoxStructure>({
     type: String,
     required: true,
   },
-  scientific_name: {
+  scientificName: {
     type: String,
     required: true,
   },
