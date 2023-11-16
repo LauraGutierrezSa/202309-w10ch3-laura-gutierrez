@@ -3,7 +3,6 @@ import morgan from "morgan";
 import pingRouter from "./features/ping/router/PingRouter.js";
 import { connectToDatabase } from "./database/index.js";
 import express from "express";
-import "./server/index.js";
 
 app.use(express.json());
 app.use(morgan("dev"));
