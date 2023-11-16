@@ -1,4 +1,4 @@
-import { Schema } from "mongoose";
+import { Schema, model } from "mongoose";
 import { type FoxStructure } from "../types";
 
 const foxSchema = new Schema<FoxStructure>({
@@ -24,4 +24,6 @@ const foxSchema = new Schema<FoxStructure>({
   },
 });
 
-export default foxSchema;
+const Fox = model("Fox", foxSchema, "foxes");
+
+export default Fox;
