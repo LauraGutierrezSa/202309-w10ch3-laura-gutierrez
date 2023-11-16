@@ -8,6 +8,7 @@ if (!process.env.MONGODB_URL) {
 }
 
 const app = express();
+app.disable("x-powered-by");
 
 export const startServer = () => {
   app.listen(port, () => {
