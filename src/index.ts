@@ -1,9 +1,14 @@
-import chalk from "chalk";
+import app from "./server/app.js";
+import morgan from "morgan";
+import pingRouter from "./features/ping/router/PingRouter.js";
+import { connectToDatabase } from "./database/index.js";
+import express from "express";
 
-const port = process.env.PORT ?? 4000;
-if (!process.env.MONGODB_URL) {
-  console.log(chalk.red("Missing MongoDb Connection String"));
-  process.exit();
-}
+app.use(express.json());
+app.use(morgan("dev"));
 
-export default port;
+app.use("/", pingRouter);
+
+const mongoDatabase = process.env.MONGODB_URL;
+
+await connectToDatabase(mongoDatabase!);
