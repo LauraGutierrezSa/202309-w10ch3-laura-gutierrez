@@ -1,5 +1,5 @@
 export interface FoxStructure {
-  _id: string;
+  id: string;
   name: string;
   scientific_name: string;
   colour: string;
@@ -8,8 +8,6 @@ export interface FoxStructure {
 }
 
 export interface FoxesRepository {
-  getFoxes: () => Promise<FoxesRepository>;
+  getFoxes: () => Promise<FoxStructure>;
   getFoxById: () => Promise<FoxStructure>;
 }
-
-export type FoxByIdRequest = Request<{ foxId: string }>;
