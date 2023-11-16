@@ -11,3 +11,5 @@ export interface FoxesRepository {
   getFoxes: () => Promise<FoxesRepository>;
   getFoxById: () => Promise<FoxStructure>;
 }
+
+export type FoxByIdRequest = Request<{ foxId: string }>;
