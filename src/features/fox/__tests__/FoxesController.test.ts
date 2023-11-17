@@ -10,6 +10,7 @@ beforeEach(() => {
 describe("Given a FoxesController's getFoxes method", () => {
   const foxesRepository: FoxesRepository = {
     getFoxes: jest.fn().mockReturnValue(foxesMock),
+    getFoxById: jest.fn().mockReturnValue(foxesMock),
   };
   const req = {};
   const res: Pick<Response, "status" | "json"> = {

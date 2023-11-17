@@ -1,21 +1,21 @@
 import Fox from "../model/Fox.js";
-import type { FoxStructure, FoxesRepository } from "../types.js";
+import type { FoxStructure, FoxesRepository } from "../types";
 
 class FoxesMongooseRepository implements FoxesRepository {
-  getFoxes = async (): Promise<FoxStructure[]> => {
+  public async getFoxes(): Promise<FoxStructure[]> {
     const foxes = await Fox.find();
     return foxes;
-  };
+  }
 
-  getFoxById = async (id: string): Promise<FoxStructure> => {
-    const foxFromDatabase = await Fox.findById(id);
+  public async getFoxById(foxId: string): Promise<FoxStructure> {
+    const foxFromDatabase = await Fox.findById(foxId);
 
     if (!foxFromDatabase) {
       throw new Error("Fox not found");
     }
 
     return foxFromDatabase;
-  };
+  }
 }
 
 export default FoxesMongooseRepository;

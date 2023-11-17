@@ -8,6 +8,6 @@ app.use(morgan("dev"));
 
 app.use(express.json());
 
-app.use("/motos", foxesRouter);
+app.use("/foxes", foxesRouter);
 
 app.use("/", pingRouter);
