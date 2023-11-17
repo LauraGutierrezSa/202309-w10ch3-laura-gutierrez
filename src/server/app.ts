@@ -10,6 +10,4 @@ export const startServer = (port: number) => {
   });
 };
 
-app.use(express.json());
-
 export default app;

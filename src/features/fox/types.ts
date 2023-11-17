@@ -9,5 +9,5 @@ export interface FoxStructure {
 
 export interface FoxesRepository {
   getFoxes: () => Promise<FoxStructure[]>;
-  getFoxbyId: (id: string) => Promise<FoxStructure>;
+  getFoxById: (foxId: string) => Promise<FoxStructure>;
 }
