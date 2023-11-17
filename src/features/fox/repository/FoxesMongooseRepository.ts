@@ -6,6 +6,16 @@ class FoxesMongooseRepository implements FoxesRepository {
     const foxes = await Fox.find();
     return foxes;
   };
+
+  getFoxById = async (id: string): Promise<FoxStructure> => {
+    const foxFromDatabase = await Fox.findById(id);
+
+    if (!foxFromDatabase) {
+      throw new Error("Fox not found");
+    }
+
+    return foxFromDatabase;
+  };
 }
 
 export default FoxesMongooseRepository;
