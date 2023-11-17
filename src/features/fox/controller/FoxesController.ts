@@ -9,6 +9,16 @@ class FoxesController {
 
     res.status(200).json({ foxes });
   };
+
+  public getFoxById = async (req: Request, res: Response): Promise<void> => {
+    const { foxId } = req.params;
+    try {
+      const fox = this.foxesRepository.getFoxById(foxId);
+      res.status(200).json({ fox });
+    } catch {
+      res.status(404).json({ error: "Fox not found" });
+    }
+  };
 }
 
 export default FoxesController;
