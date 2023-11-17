@@ -8,5 +8,6 @@ const foxesRepository = new FoxesMongooseRepository();
 const foxesController = new FoxesController(foxesRepository);
 
 foxesRouter.get("/", foxesController.getFoxes);
+foxesRouter.get("/:foxId", foxesController.getFoxById);
 
 export default foxesRouter;
